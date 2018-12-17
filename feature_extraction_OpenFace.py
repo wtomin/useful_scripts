@@ -4,10 +4,9 @@ import glob
 import argparse
 import time
 """
-feature extraction with OpenFace.
+feature extraction with OpenFace., when input files are video files.
 given input_dir and outpu_dir, generating OpenFace features with same saving structure (meaning same subdirectory names)
-convert_2mp4
-conver all existing videos to mp4 format
+
 """
 parser = argparse.ArgumentParser(description='arguments for video face detection and face feature extraction.')
 parser.add_argument("-i", "--input_dir", type=str, default=None)
