@@ -4,11 +4,9 @@ import glob
 import argparse
 import time
 """
-func video_reader
-reading all videos in given dir (including subdirs and subsubdirs)
-return video paths and saved video dir (specified in output dir)
-
-func convert_2mp4
+feature extraction with OpenFace.
+given input_dir and outpu_dir, generating OpenFace features with same saving structure (meaning same subdirectory names)
+convert_2mp4
 conver all existing videos to mp4 format
 """
 parser = argparse.ArgumentParser(description='arguments for video face detection and face feature extraction.')
@@ -40,6 +38,14 @@ def convert_2mp4():
 # change to correct executable file location
 OpenFace_FeatureExtraction = "C:/Users/ddeng/Documents/NISL/OpenFace_v2.1.0/OpenFace_2.1.0_win_x64/OpenFace_2.1.0_win_x64/FeatureExtraction.exe"
 def video_reader(input_dir, output_dir):
+    """
+    params:
+    input_dir: input directory with videos
+    output_dir: the directory that feature will be saved in
+    return:
+    video_input_paths: input video file paths
+    video_output_dirs: output feature storage directory
+    """
     video_ext = ['.avi', '.mp4', '.MP4']
     video_input_paths = []
     video_output_dirs = []
