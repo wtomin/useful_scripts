@@ -9,7 +9,7 @@ from PIL import Image
 import time
 """
 reading all videos in given dir (including subdirs and subsubdirs)
-return video paths and saved video dir
+return the aligend face images of each video
 """
 
 detector = MTCNN()
