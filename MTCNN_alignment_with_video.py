@@ -28,7 +28,7 @@ def video_reader(input_dir, output_dir):
     video_output_dirs = []
     for dirpath, dirname, filenames in os.walk(input_dir):
         if any([ext in filename for ext in video_ext for filename in filenames]):
-            video_path = [os.path.join(dirpath, filename) for filename in filenames]
+            video_path = [os.path.join(dirpath, filename) for filename in filenames if any([ext in filename for ext in video_ext])]
             video_names = [os.path.splitext(filename)[0] for filename in filenames]
             prefix = dirpath.replace(input_dir, output_dir)
             output_video_dirs = [os.path.join(prefix, video_n) for video_n in video_names]
